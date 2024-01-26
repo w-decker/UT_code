@@ -36,6 +36,8 @@ def plot_rois(roi, cmap):
                                 bg_map=fsaverage['sulc_left'], bg_on_data=True,
                                 darkness=.5, cmap=cmap)
     
+    return p
+    
 def plot_glass(cmap, threshold):
     """Plot a glass brain with sample Nilearn data"""
 
