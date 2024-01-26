@@ -35,3 +35,13 @@ def plot_rois(roi, cmap):
                                 hemi='left', view='lateral',
                                 bg_map=fsaverage['sulc_left'], bg_on_data=True,
                                 darkness=.5, cmap=cmap)
+    
+def plot_glass(cmap, threshold):
+    """Plot a glass brain with sample Nilearn data"""
+
+    statimg = datasets.load_sample_motor_activation_image()
+
+    p = plotting.plot_glass_brain(statimg, threshold=threshold, cmap=cmap, display_mode='x')
+
+    return p
+
